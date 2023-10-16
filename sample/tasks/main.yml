@@ -1,0 +1,9 @@
+- name:  Installing NGINX
+  ansible.builtin.yum:
+    name: nginx
+    state: latest
+- name: Starting NGINX service
+  ansible.builtin.systemd:
+    name: nginx
+    state: started
+    enabled: yes
