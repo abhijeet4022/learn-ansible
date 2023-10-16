@@ -2,7 +2,7 @@
   hosts: WEB
   become: true
   tasks:
-    - name:  echo -e "\e[33m-----------Script Run Successfully-----------\e[0m"
+    - name:  Installing NGINX
       ansible.builtin.yum:
         name: nginx
         state: latest
