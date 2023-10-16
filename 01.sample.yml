@@ -3,12 +3,12 @@
   become: true
   tasks:
     - name: Installing NGINX
-      ansible_builtin_yum:
+      ansible.builtin.yum:
         name: nginx
         state: latest
 
     - name: Starting NGINX service
-      ansible_builtin_systemd:
+      ansible.builtin.systemd:
         name: nginx
         state: started
         enabled: yes
