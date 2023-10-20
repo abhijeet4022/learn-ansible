@@ -9,3 +9,24 @@
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
+
+# In organization, they are using a centralized place where they will store the parameter and retrieve these parameters
+# AWS :--
+# system manager: AWS provided service to centralize the parameter and password.
+
+# HashiCorp:-
+# consul: To centralize the parameter and password.
+# hashicorp vault: To centralize the secrets and password.
+
+
+# Why shell scripting
+#When same job we have to on a daily or hourly basis in OS level then instead of going manual thing daily we can use shell scripting
+# to automate the tasks.
+
+#Why Ansible
+#When same jobs we have to do a daily or hourly basis for the few server links 10 or 20 etc. then we are ok with shell scripting,
+# but 1000 of server will come into picture then we have to use Ansible to automate the 1000-server configuration in a
+# single shot.
+
+# Why Terraform
+# Terraform can automate the infra development and also can do the deployment.
