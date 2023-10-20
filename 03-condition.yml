@@ -1,0 +1,17 @@
+- name: Print Fruit & Vegetable Name.
+  hosts: localhost
+  connection: local
+  become: yes
+  var:
+    fruit: Mango
+    vegetable: potato
+  tasks:
+    - name: Print fruit name
+      ansible.builtin.debug:
+        msg: Fruit name is {{fruit}}
+      when: fruit is defined
+
+    - name: Print vegetable name
+      ansible.builtin.debug:
+        msg: Fruit name is {{vegetable}}
+      when: vegetable is defined
