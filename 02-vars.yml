@@ -1,13 +1,14 @@
 # Precedence = priority of importance #Precedence is the technical word of priority
 
-# Ansible access  variable with two flower brackets.
+# Ansible access variable with two flower brackets.
 
-# We can pass the variable from command line also.
-#  ansible-playbook 02-vars.yml -e URL=cli.google.com  # Cli variable is 1st priority
+# We can pass the variable from the command line also.
+ansible-playbook 02-vars.yml -e URL=cli.google.com  # Cli variable is 1st priority
 
 
-# We can pass the variable on tasks label also
-# Pass the varible from any particular task is 2nd priority
+# We can pass the variable on tasks' label also
+
+# Pass the variable from any particular task is 2nd priority
 - name: Print tasks variable
   ansible.builtin.debug:
     msg: "URL = {{URL}}"
@@ -16,7 +17,7 @@
 
 
 # Pass the variable for complete playbook
-# Pass the varible from complete playbook is 3rd priority
+# Pass the variable from complete playbook is 4th priority
 - name: variable
   hosts: localhost
   connection: local
@@ -32,7 +33,7 @@
 #2nd- tasks level variables
 #3rd- vars dir from role
 #4th- play level variables
-#5th- defaults dir from role
+#5th- defaults dir from roles
 
 
 

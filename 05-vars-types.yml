@@ -4,9 +4,9 @@
   vars:
     fruit_name: Orange #String
     quantity: 100 # Number
-    for_sale: true # Boolean, B
+    for_sale: true # Boolean, only true & false
   tasks:
     - name: Print
       ansible.builtin.debug:
         msg: Fruit Name - {{ fruit_name}}, Quantity - {{quantity}}
-      when: for_sale # If for_sale is true then it will run otherwise it will skip
+      when: for_sale # If for_sale is true, then it will run otherwise it will skip

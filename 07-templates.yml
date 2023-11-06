@@ -9,6 +9,8 @@
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
+#it will look for the source file "test.txt" and copy the file to dest file with variable value.
+
 
 # In organization, they are using a centralized place where they will store the parameter and retrieve these parameters
 # AWS :--
